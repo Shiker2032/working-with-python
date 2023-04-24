@@ -14,7 +14,7 @@ print("Input age")
 age = input()
 
 
-print("This is {} with the name of '{}', Age: {}".format(species, name, age))
+print("This is {} with the name of '{}'. Age: {}.".format(species, name, age))
 
 # task 2
 
