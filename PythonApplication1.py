@@ -1,11 +1,11 @@
 # task 1
-print("Input a b c sides and height of the triangle")
-a, b, c, h = map(int, input().split())
-s = (b * h) // 2
-p = a + b + c
+print("Input a, b sides of the rectangle")
+a, b, = map(int, input().split())
+s = a * b
+p = 2 * (a + b)
 
-print("Triangle area:", s)
-print ("Triangle perimeter:", p)
+print("Rectangle area:", s)
+print ("Rectangle perimeter:", p)
 
 #task 2
 a = 46275
