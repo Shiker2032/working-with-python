@@ -18,13 +18,28 @@ else:
 word = str(input("Input word to count vowels and consonants "))
 vowels = 0
 consonants = 0
+a = e = i = o = u = 0
 
 for letter in word:
-    if (letter == "a") or (letter == "e") or (letter == "i") or (letter == "o") or (letter == "u"):
+    if (letter == "a"):
+        a += 1
+        vowels += 1
+    elif(letter == "e"):
+        e += 1
+        vowels += 1
+    elif(letter == "i"):
+        i += 1
+        vowels += 1
+    elif(letter == "o"):
+        o += 1
+        vowels += 1
+    elif(letter == "u"):
+        u += 1
         vowels += 1
     else:
-        consonants += 1
+        consonants += 1 
 print("Vowels: %i, Consonants: %i" % (vowels, consonants))
+print("Indiual vowels - a: %i, e: %i, i: %i, o: %i, u: %i" %(a,e,i,o,u))
 
 #task 3
 michael = int(input("Michael cash:"))
