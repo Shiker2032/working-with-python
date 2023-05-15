@@ -1,5 +1,7 @@
 
+
 # task 1 Count zeros in input
+
 
 n = int(input("Input numbers amount"))
 cntZero = 0
@@ -27,8 +29,8 @@ print("Total natural dividers count: ", cntNatural)
 a = int(input("Input a: "))
 b = int(input("Input b: "))
 result = ''
-while (a < b):
-    a+=1
+while (a <= b):    
     if (a % 2 == 0):
        result = result + " " + str(a)
+    a+=1
 print(result)
