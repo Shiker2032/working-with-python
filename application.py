@@ -20,7 +20,7 @@ else:
     tmp2 = list(map(int, input().split()))
     a = tmp2[0]
     tmp2[0] = tmp2[-1]
-    tmp2.insert(1, a)
+    tmp2[-1] = a
     print(tmp2)
 
 # task 3
