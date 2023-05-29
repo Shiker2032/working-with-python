@@ -11,16 +11,15 @@ if ((n >= 1) and (n <= 100000)):
 else:
     print("range should start from 1 and be less than 100 000")
 
-#task 2 
+# task 2 
 n2 = int(input("input n "))
 tmp2 = []
 if (n2 < 0) or (n2 > 100000):
     print("range should start from 1 and be less than 100 000")
 else:
-    tmp2 = list(map(int, input().split()))
-    a = tmp2[0]
-    tmp2[0] = tmp2[-1]
-    tmp2[-1] = a
+    tmp2 = list(map(int, input().split()))    
+    tmp2.insert(0,tmp2[-1])
+    tmp2.pop()  
     print(tmp2)
 
 # task 3
