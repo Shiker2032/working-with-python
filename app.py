@@ -1,10 +1,14 @@
 # task 1
 def formatAge(age
 ):
-    n = age % 10  
-    suffix = ("год" if n==1 else 
-              "года" if 1<n<5 else 
-              "лет")
+    n = age
+    last = int(str(age)[-1])
+    suffix = ""
+
+    if (5 <= n <= 20): suffix = "лет"
+    elif (last == 1): suffix = "год"
+    elif (1 < last < 5): suffix = "года"
+    elif (4 < last or last == 0): suffix = "лет"
     return f"{age} {suffix}"
 
 pets = dict()
@@ -36,4 +40,3 @@ while i > -5:
     i -= 1
 
 print(tmp)
-
