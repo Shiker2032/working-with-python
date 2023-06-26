@@ -1,20 +1,20 @@
 
 ## task 1
-# def factorial (n:int):
-#     result = 1
-#     for i in range(n):
-#         result*=i+1
-#     return result
+def factorial (n:int):
+    result = 1
+    for i in range(n):
+        result*=i+1
+    return result
 
-# def getFactorial (n:int):
-#     tmp = []
-#     i = factorial(n)
-#     while i >= 1:
-#         tmp.append(factorial(i)) 
-#         i-=1
-#     print(tmp)
+def getFactorial (n:int):
+    tmp = []
+    i = factorial(n)
+    while i >= 1:
+        tmp.append(factorial(i)) 
+        i-=1
+    print(tmp)
 
-# getFactorial(int(input("input number ")))
+getFactorial(int(input("input number ")))
 
 ## task 2
 
