@@ -1,20 +1,20 @@
 
 ## task 1
-def factorial (n:int):
-    result = 1
-    for i in range(n):
-        result*=i+1
-    return result
+# def factorial (n:int):
+#     result = 1
+#     for i in range(n):
+#         result*=i+1
+#     return result
 
-def getFactorial (n:int):
-    tmp = []
-    i = factorial(n)
-    while i >= 1:
-        tmp.append(factorial(i)) 
-        i-=1
-    print(tmp)
+# def getFactorial (n:int):
+#     tmp = []
+#     i = factorial(n)
+#     while i >= 1:
+#         tmp.append(factorial(i)) 
+#         i-=1
+#     print(tmp)
 
-getFactorial(int(input("input number ")))
+# getFactorial(int(input("input number ")))
 
 ## task 2
 
@@ -88,20 +88,20 @@ def create ():
      pets[getLastKey() + 1] = pet
      print(pets)
 
-def read():
-     id = int(input("input pet id "))
+def read(id):     
      petData = getPet(id)
      nameKey =  list(petData.keys())
      pet = petData[nameKey[0]]
      result = "Это {} по кличке {}. Возраст питомца: {}. Имя владельца: {}".format(pet["Вид питомца"], nameKey[0], formatAge(pet["Возраст питомца"]), pet["Имя владельца"])
-     print(result)
+     return result
 
 
 def getPet(id):
     return  pets[id] if id in pets else False    
 
 def update (id):
-     petKey = list(pet.keys())[-1]
+     pet = getPet(id)
+     petKey = list(pet.keys())[0]
      newKind = input("input new kind ")     
      newOwner = input("input new owner name ")
      ageInput = input("input new age")  
@@ -129,7 +129,7 @@ while comand != "stop":
      elif comand == "read": 
           petId = int(input("input pet id "))
           pet = getPet(petId)
-          if (pet): read(petId)
+          if (pet): print(read(petId))
           else: print("wrong id")
      elif comand == "update":
           petId = int(input("input pet id "))
