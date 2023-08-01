@@ -3,18 +3,27 @@ from map import Map
 import time
 import os
 
-tmp = Map(20, 10)
-tmp.generateForest(3, 10)
-tmp.generateRiver(10)
-tmp.generateRiver(10)
-tmp.printMap()
+TICK_SLEEP = 0.1
+TREE_UPDATE = 50
+FIRE_UPDATE = 40
+MAP_W, MAP_H = 20, 10
+
+field = Map(MAP_W, MAP_H)
+field.generateForest(3, 10)
+field.generateRiver(10)
+field.generateRiver(10)
+field.printMap()
 
 
 tick = 1
-TICK_SLEEP = 0.23
+
 while True:
-    os.system("cls")
+    os.system("cls") #clear for linux
     print("TICK", tick)
-    tmp.printMap()
+    field.printMap()
     tick += 1
     time.sleep(TICK_SLEEP)
+    if (tick % TREE_UPDATE == 0):
+        field.generateTree()
+    if (tick % FIRE_UPDATE == 0):
+        field.updateFires()
