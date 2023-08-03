@@ -33,10 +33,10 @@ tick = 1
 
 while True:
     os.system("cls") #clear for linux
-    print("TICK", tick)
     field.processHelicopter(helico)
     helico.printStats()
     field.printMap(helico)
+    print("TICK", tick)
     tick += 1
     time.sleep(TICK_SLEEP)
     if (tick % TREE_UPDATE == 0):
