@@ -42,4 +42,4 @@ while True:
     if (tick % TREE_UPDATE == 0):
         field.generateTree()
     if (tick % FIRE_UPDATE == 0):
-        field.updateFires()
+        field.updateFires(helico)
